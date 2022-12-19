@@ -28,12 +28,11 @@ public class MainActivity extends AppCompatActivity {
     public void funcNumButton(View view) {
         Button button = (Button) view;
         String res = button.getText().toString();
-        Log.d("tag3", res);
         textView.append(res);
     }
 
     public void artmaticClick(View view) {
-        if (textView.getText().toString() == ErrorString) {
+        if (textView.getText().toString().equals(ErrorString)) {
             textView.setText("");
             return;
         }
@@ -66,8 +65,7 @@ public class MainActivity extends AppCompatActivity {
                     if (num2 != 0) {
                         finalNumber = num1 / num2;
                     } else {
-                        textView.setText("");
-                        textView.append("ERROR CANOT DEVIED BY ZERO");
+                        textView.setText(ErrorString);
                         hasError = true;
                     }
                     break;
@@ -85,7 +83,3 @@ public class MainActivity extends AppCompatActivity {
         num1 = 0;
     }
 }
-
-//        textView.append(num1.toString());
-//        Log.d("tag3", textView.getText().toString());
-

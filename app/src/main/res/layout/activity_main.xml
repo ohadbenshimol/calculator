@@ -22,7 +22,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textColor="@color/white"
-            android:textSize="34sp" />
+            android:textSize="40sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -38,6 +38,7 @@
             android:layout_weight="1"
             android:backgroundTint="#4A4A4A"
             android:onClick="funcNumButton"
+            android:textSize="30sp"
             android:text="1" />
 
         <Button
@@ -47,6 +48,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:onClick="funcNumButton"
+            android:textSize="30sp"
             android:backgroundTint="#4A4A4A"
             android:text="2" />
 
@@ -56,9 +58,11 @@
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:onClick="funcNumButton"
             android:backgroundTint="#4A4A4A"
-            android:text="3" />
+            android:textSize="30sp"
+            android:onClick="funcNumButton"
+            android:text="3"
+             />
 
         <Button
             android:id="@+id/buttonPlus"
@@ -68,7 +72,7 @@
             android:layout_weight="1"
             android:backgroundTint="#EF9E25"
             android:onClick="artmaticClick"
-            android:textSize="20sp"
+            android:textSize="30sp"
             android:text="+" />
     </LinearLayout>
 
@@ -86,6 +90,7 @@
             android:layout_weight="1"
             android:backgroundTint="#4A4A4A"
             android:onClick="funcNumButton"
+            android:textSize="30sp"
             android:text="4" />
 
         <Button
@@ -96,6 +101,7 @@
             android:layout_weight="1"
             android:backgroundTint="#4A4A4A"
             android:onClick="funcNumButton"
+            android:textSize="30sp"
             android:text="5" />
 
         <Button
@@ -106,7 +112,7 @@
             android:layout_weight="1"
             android:backgroundTint="#4A4A4A"
             android:onClick="funcNumButton"
-
+            android:textSize="30sp"
             android:text="6" />
 
         <Button
@@ -117,7 +123,7 @@
             android:layout_weight="1"
             android:backgroundTint="#EF9E25"
             android:onClick="artmaticClick"
-            android:textSize="20sp"
+            android:textSize="30sp"
             android:text="-" />
     </LinearLayout>
 
@@ -135,6 +141,7 @@
             android:layout_weight="1"
             android:backgroundTint="#4A4A4A"
             android:onClick="funcNumButton"
+            android:textSize="30sp"
             android:text="7" />
 
         <Button
@@ -145,6 +152,7 @@
             android:layout_weight="1"
             android:backgroundTint="#4A4A4A"
             android:onClick="funcNumButton"
+            android:textSize="30sp"
             android:text="8" />
 
         <Button
@@ -155,6 +163,7 @@
             android:layout_weight="1"
             android:backgroundTint="#4A4A4A"
             android:onClick="funcNumButton"
+            android:textSize="30sp"
             android:text="9" />
 
         <Button
@@ -165,7 +174,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:backgroundTint="#EF9E25"
-            android:textSize="20sp"
+            android:textSize="30sp"
             android:text="*" />
     </LinearLayout>
 
@@ -182,7 +191,7 @@
             android:layout_weight="1"
             android:backgroundTint="#4A4A4A"
             android:onClick="funcNumButton"
-
+            android:textSize="30sp"
             android:text="0" />
 
         <Button
@@ -190,11 +199,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
-            android:backgroundTint="#8F8B8B"
             android:layout_weight="1"
+            android:backgroundTint="#9E9696"
             android:onClick="reset"
-            android:textSize="15sp"
-            android:text="AC" />
+            android:text="AC"
+            android:textSize="30sp"
+            app:rippleColor="#FDDCDC" />
 
         <Button
             android:id="@+id/buttonEquel"
@@ -204,7 +214,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:backgroundTint="#EF9E25"
-            android:textSize="20sp"
+            android:textSize="30sp"
             android:text="=" />
 
         <Button
@@ -215,7 +225,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:backgroundTint="#EF9E25"
-            android:textSize="20sp"
+            android:textSize="30sp"
             android:text="/" />
     </LinearLayout>
 </LinearLayout>
