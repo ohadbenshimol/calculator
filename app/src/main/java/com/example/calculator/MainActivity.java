@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     TextView textView;
     Integer num1;
     String operator;
+    String ErrorString = "Err";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,47 +28,61 @@ public class MainActivity extends AppCompatActivity {
     public void funcNumButton(View view) {
         Button button = (Button) view;
         String res = button.getText().toString();
+        Log.d("tag3", res);
         textView.append(res);
     }
 
     public void artmaticClick(View view) {
+        if (textView.getText().toString() == ErrorString) {
+            textView.setText("");
+            return;
+        }
         operator = ((Button) view).getText().toString();
-        Log.d("tag3", textView.getText().toString());
         if (!TextUtils.isEmpty(textView.getText().toString())) {
-            num1 = Integer.parseInt(textView.getText().toString());;
+            num1 = Integer.parseInt(textView.getText().toString());
             textView.setText("");
         }
     }
 
     public void onPrassCalc(View view) {
-        Integer num2 = Integer.parseInt(textView.getText().toString());
-        Integer finalNumber = 0;
-        boolean hasError = false;
-        switch (operator) {
-            case "+":
-                finalNumber = num1 + num2;
-                break;
-            case "-":
-                finalNumber = num1 - num2;
-                break;
-            case "*":
-                finalNumber = num1 * num2;
-                break;
-            case "%":
-                if (num2 != 0) {
-                    finalNumber = num1 / num2;
-                } else {
-                    textView.setText("");
-                    textView.append("ERROR CANOT DEVIED BY ZERO");
-                    hasError = true;
-                }
-                break;
-        }
+        if (TextUtils.isEmpty(textView.getText().toString()) || num1 == null) {
+            textView.setText(ErrorString);
 
-        if (!hasError) {
-            textView.setText("");
-            textView.append(finalNumber.toString());
+        } else {
+            Integer num2 = Integer.parseInt(textView.getText().toString());
+            Integer finalNumber = 0;
+            boolean hasError = false;
+            switch (operator) {
+                case "+":
+                    finalNumber = num1 + num2;
+                    break;
+                case "-":
+                    finalNumber = num1 - num2;
+                    break;
+                case "*":
+                    finalNumber = num1 * num2;
+                    break;
+                case "/":
+                    if (num2 != 0) {
+                        finalNumber = num1 / num2;
+                    } else {
+                        textView.setText("");
+                        textView.append("ERROR CANOT DEVIED BY ZERO");
+                        hasError = true;
+                    }
+                    break;
+            }
+
+            if (!hasError) {
+                textView.setText("");
+                textView.append(finalNumber.toString());
+            }
         }
+    }
+
+    public void reset(View view) {
+        textView.setText("");
+        num1 = 0;
     }
 }
 
